@@ -18,7 +18,11 @@ export default defineConfig((config) => {
     },
     server: {
       host: true,
-      allowedHosts: true
+      allowedHosts: true,
+    },
+    headers: {
+      'Cross-Origin-Embedder-Policy': 'require-corp',
+      'Cross-Origin-Opener-Policy': 'same-origin',
     },
     build: {
       target: 'esnext',
